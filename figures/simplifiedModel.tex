@@ -1,0 +1,31 @@
+\documentclass[crop,tikz,USenglish]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+% \usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\newcommand*{\ATLASLATEXPATH}{../}
+\usepackage{\ATLASLATEXPATH atlaspackage}
+\usepackage{\ATLASLATEXPATH atlasphysics}
+\usepackage{\ATLASLATEXPATH atlasjetetmiss}
+\usepackage{\ATLASLATEXPATH ANA-SUSY-2018-12-PAPER-defs}
+\begin{document}
+
+\begin{tikzpicture}
+  \draw[thick, line width=1.2] (0,0) -- (1.5,0);
+  \draw[thick, line width=1.2] (0,2) -- (1.5,2);
+  \draw[thick, line width=1.2] (0,5) -- (1.5,5);
+  \draw[thick, line width=1.2] (0,5.1) -- (1.5,5.1);
+  \draw[thick, line width=1.2] (0,5.2) -- (1.5,5.2);
+  \node[black,] at (0.75,5.4) {\gluino,\squark, etc};
+  \node[black,] at (0.75,4.8) {Too heavy};
+  \node[black,] at (0.75,4.45) {for direct};
+  \node[black,] at (0.75,4.10) {production};
+  \node[black,] at (0.75,3.75) {at LHC};
+
+  \node[black,] at (0.75,2.3) {\stop};
+  \node[black,] at (0.75,0.25) {\LSP};
+
+  \draw[<-,thick,dashed, line width=1.2] (0.2, 0) -- (0.2,2);
+
+  \draw[->,thick, line width=1.2] (2, 0) -- (2,5.2);
+  \node[black,rotate=90] at (2.3,2.5) {mass};
+
+\end{tikzpicture}
+\end{document}

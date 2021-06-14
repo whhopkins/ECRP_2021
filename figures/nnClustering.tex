@@ -1,0 +1,16 @@
+\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+% \usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\usepackage{pgfplots}
+\begin{document}
+
+\begin{tikzpicture}[scale=1]
+  \begin{axis}[grid=none, xmin=0, xmax=1, ymin=0, ymax=1,
+     xlabel=NN output, ylabel={Arbitrary units},
+     xtick = {0,0.2,...,1}, ytick = {0,0.2,...,1},
+     scale=1, restrict y to domain=0:1]
+     
+     \addplot[red, dashed, samples=100, smooth]
+       plot (\x, {exp(-3*(\x+1) } );
+   \end{axis}
+\end{tikzpicture}
+\end{document}

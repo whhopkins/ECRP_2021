@@ -1,0 +1,13 @@
+1. Self-driving new physics searches: maximally exploring the high-dimensional LHC data with ML
+2. Automated strategy for new physics discovery at the LHC
+3. Maximally exploiting the high-dimensional LHC data with ML
+4. AI designed searches for new physics discovery at the LHC
+5. Tackling the depth and width of the HL-LHC data with ML
+6. Deep exploration of the HL-LHC data set with ML
+7. Preparing AI to explore the HL-LHC data set
+8. Machine learning guided search strategy for new physics discovery at the Large Hadron Collider
+9. Machine learning designed search program for new physics discovery at the Large Hadron Collider
+10. Machine learning directed new physics search program at the LHC
+11. ML, show me the new physics!
+
+

@@ -1,0 +1,21 @@
+\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+% \usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\begin{document}
+
+\begin{tikzpicture}[scale=.5]
+  \draw [step=1.0, thick] (0,0) grid (4,1);
+  
+  \draw[->,blue,thick] (0.05,.1) -- (.95,.2);
+  \draw[->,blue,thick] (1.05,.2) -- (1.95,.3);
+  \draw[->,blue,thick] (2.05,.3) -- (2.95,.4);
+  \draw[->,blue,thick] (3.05,.4) -- (3.45,.45);
+  \draw[->,blue,thick] (3.55,.55) -- (3.95,1);
+
+  \filldraw[orange] (0,.1) circle (2pt);
+  \filldraw[orange] (1,.2) circle (2pt);
+  \filldraw[orange] (2,.3) circle (2pt);
+  \filldraw[orange] (3,.4) circle (2pt);
+  \filldraw[orange] (3.5,.47) circle (2pt);
+
+\end{tikzpicture}
+\end{document}

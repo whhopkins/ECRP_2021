@@ -1,0 +1,30 @@
+\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+\usetikzlibrary{calc}
+\usetikzlibrary{hobby}
+\begin{document}
+\tikzset{
+ pics/blob/.style={
+   code={
+   \draw[use Hobby shortcut, fill, closed] (0,0) +($(0:1+4*rnd)$)
+       \foreach \a in {60,120,...,350} {  .. +($(\a: 1+4*rnd)$) };
+   }
+}}
+\begin{tikzpicture}[scale=1]
+  \begin{scope}[shift={(0,0)},rotate=90]
+  \draw[dashed,thick] (0,0) arc (170:10:2cm and 0.8cm)coordinate[pos=0] (a);
+    \draw[thick] (0,0) arc (-170:-10:2cm and 0.8cm)coordinate (b);
+    \draw[thick] (a) -- ([yshift=4cm]$(a)!0.5!(b)$) -- (b);
+  \end{scope}
+  \begin{scope}[shift={(0,1)},scale=1.5]
+    %\foreach \x in {0,...,1} {
+    %  \foreach \y in {0,...,1} {
+        \pgfmathsetmacro{\scale}{0.1+0.1*rnd}
+        \pic at (0,-0.2)  [fill=blue!30, scale=0.1, rotate=360*rnd]{blob};
+        \pic at (0,0.4)  [fill=blue!30, scale=0.1, rotate=360*rnd]{blob};
+        \pic at (-0.3,0.8)  [fill=blue!30, scale=0.05, rotate=360*rnd]{blob};
+        \pic at (0.1,1.2)  [fill=blue!30, scale=0.08, rotate=360*rnd]{blob};
+    %  }
+    %}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

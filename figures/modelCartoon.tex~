@@ -1,0 +1,28 @@
+\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+% \usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\begin{document}
+
+\begin{tikzpicture}
+  \draw[draw=red, line width=1] (4.9,2.4) arc(0:360:3.2 and 3.2);
+  \node[align=center,red,font={\bfseries}] at (2,0) {SUSY};
+  
+  \draw[draw=blue, line width=1] (4,2.9) arc(0:360:2.3 and 2.3);
+  \node[align=center,blue,font={\scriptsize\bfseries}] at (2.,4.5) {N=1};
+
+  \draw[draw=green,line width=1] (3.5,3.1) arc(0:360:1.1 and 1.1);
+  \node[align=center,green,font={\scriptsize\bfseries}] at (2.4,3.9) {MSSM};
+  \draw[draw=green, line width=1] (1.1,2.8) arc(0:360:0.8 and 0.8);
+  \node[align=center,green,font={\scriptsize\bfseries}] at (0.4,2.6) {NMSSM};
+
+  \draw[draw=red, fill=orange, line width=1] (3.1,2.8) arc(0:360:0.7 and 0.7);
+  \node[align=center,red,font={\scriptsize\bfseries}] at (2.4,2.5) {pMSSM};
+  \draw[draw=gray, line width=1] (1.5,1.4) arc(0:360:0.5 and 0.5);
+  \draw[draw=gray, line width=1] (2.5,1.2) arc(0:360:0.3 and 0.3);
+  \draw[draw=gray, line width=1] (1.2,4.2) arc(0:360:0.5 and 0.5);
+
+  \filldraw [black] (2.6,3.2) circle (1pt);
+  \node[align=center,black,font={\tiny\bfseries}] at (2.4,3.05) {Simplified};
+  \node[align=center,black,font={\tiny\bfseries}] at (2.16,2.9) {model};
+
+\end{tikzpicture}
+\end{document}

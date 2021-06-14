@@ -1,0 +1,35 @@
+\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+% \usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\usetikzlibrary{shapes.symbols}
+\begin{document}
+
+\begin{tikzpicture}[scale=2]
+  \draw [step=1.0, very thick] (0,0) grid (4,1);
+  \node[starburst,color=orange,fill=orange, minimum width=2cm, minimum height=1cm,] at (.4,.5) {};
+
+  \draw[->,blue, very thick] (0.05,.5) -- (.75,.5);
+
+  %\draw[->,blue,very thick] (0.35,.5) -- (.8,.7);
+  %\draw[->,blue,very thick] (0.35,.5) -- (.52,.33);
+
+  % \draw[->,blue,thick] (0.35,.5) -- (.8,1.);
+  % \draw[->,blue,thick] (0.35,.5) -- (.95,.4);
+  % \draw[->,blue,thick] (1.05,.4) -- (1.95,.3);
+  % \draw[->,blue,thick] (2.05,.3) -- (2.95,.2);
+  % \draw[->,blue,thick] (3.05,.2) -- (3.45,.15);
+  % \draw[->,blue,thick] (3.55,.15) -- (3.97,0.4);
+
+  
+  \filldraw[orange] (0,.5) circle (1.5pt);
+  %\filldraw[orange] (0.37,.5) circle (1.5pt);
+
+  %\begin{scope}[scale=0.01]
+    %\end{scope}
+  %\filldraw[orange] (0.35,.5) circle (2pt);
+  % \filldraw[orange] (1,.4) circle (2pt);
+  % \filldraw[orange] (2,.3) circle (2pt);
+  % \filldraw[orange] (3,.2) circle (2pt);
+  % \filldraw[orange] (3.5,.17) circle (2pt);
+
+\end{tikzpicture}
+\end{document}

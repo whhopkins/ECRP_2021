@@ -1,0 +1,42 @@
+\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+% \usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usepackage[none]{hyphenat} 
+\usetikzlibrary{shapes,arrows}
+\begin{document}
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=20em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+minimum height=2em]
+
+\begin{tikzpicture}[node distance = 2cm, auto]
+  % Place nodes
+    \node [block] (scan) {Scan theory parameters};
+    % \node [cloud, left of=init] (expert) {expert};
+    % \node [cloud, right of=init] (system) {system};
+    \node [block, below of=scan] (simpleana) {Simplified detector simulation};
+    \node [block, below of=simpleana] (exclude) {Exclude models with previous searches};
+    \node [block, below of=exclude, fill=red] (clustering) {\bf Find promising regions in observables space (clustering). First implemented before Run~3 ($\sim$2022), refined for HL-LHC};
+    \node [block, below of=clustering, fill=red] (backgrounds) {\bf Estimate backgrounds in regions with fast and accurate detector simulations (FullSim). Ready for HL-LHC.};
+    \node [block, below of=backgrounds] (program) {Finalize search regions};
+    %\node [block, left of=evaluate, node distance=3cm] (update) {update model};
+    %\node [decision, below of=evaluate] (decide) {is best candidate better?};
+    %\node [block, below of=decide, node distance=3cm] (stop) {stop};
+    % Draw edges
+    \path [line,thick] (scan) -- (simpleana);
+    \path [line,thick] (simpleana) -- (exclude);
+    \path [line,thick] (exclude) -- (clustering);
+    \path [line,thick] (clustering) -- (backgrounds);
+    \path [line,thick] (backgrounds) -- (program);
+    %\path [line] (program) -| node {Next} (scan);
+    %\path [line] (update) |- (identify);
+    %\path [line] (decide) -- node {no}(stop);
+    % \path [line,dashed] (expert) -- (init);
+    % \path [line,dashed] (system) -- (init);
+    % \path [line,dashed] (system) |- (evaluate);
+\end{tikzpicture}
+\end{document}

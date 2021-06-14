@@ -1,0 +1,125 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Berger:2008cq}{article}{}
+      \name{author}{4}{}{%
+        {{hash=d71ac6ac5162659b9a0f75019301e812}{%
+           family={Berger},
+           familyi={B\bibinitperiod},
+           given={Carola\bibnamedelima F.},
+           giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=70389dfdbd9b8f54aa0c4f399c6449eb}{%
+           family={Gainer},
+           familyi={G\bibinitperiod},
+           given={James\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=a174ea49482f294bc70efb30487b902c}{%
+           family={Hewett},
+           familyi={H\bibinitperiod},
+           given={JoAnne\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=33ae6672f9fc378d24d864ab1740fe48}{%
+           family={Rizzo},
+           familyi={R\bibinitperiod},
+           given={Thomas\bibnamedelima G.},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{1fc973cdeaae117175f068a49fdb9fc8}
+      \strng{fullhash}{72299964e16b47204d3dd87433ca531b}
+      \strng{bibnamehash}{72299964e16b47204d3dd87433ca531b}
+      \strng{authorbibnamehash}{72299964e16b47204d3dd87433ca531b}
+      \strng{authornamehash}{1fc973cdeaae117175f068a49fdb9fc8}
+      \strng{authorfullhash}{72299964e16b47204d3dd87433ca531b}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Supersymmetry Without Prejudice}}
+      \field{volume}{02}
+      \field{year}{2009}
+      \field{pages}{023}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1126-6708/2009/02/023
+      \endverb
+      \verb{eprint}
+      \verb 0812.0980
+      \endverb
+    \endentry
+    \entry{ATL-SOFT-PUB-2018-002}{report}{}
+      \list{institution}{1}{%
+        {CERN}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{number}{ATL-SOFT-PUB-2018-002}
+      \field{title}{{The new Fast Calorimeter Simulation in ATLAS}}
+      \field{type}{techreport}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://cds.cern.ch/record/2630434
+      \endverb
+      \verb{url}
+      \verb http://cds.cern.ch/record/2630434
+      \endverb
+    \endentry
+    \entry{Agostinelli:2002hh}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=1fa1785986425bed4463a184d407c5f5}{%
+           family={Agostinelli},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa9af5bf616b1437509f374c63638866}
+      \strng{fullhash}{aa9af5bf616b1437509f374c63638866}
+      \strng{bibnamehash}{aa9af5bf616b1437509f374c63638866}
+      \strng{authorbibnamehash}{aa9af5bf616b1437509f374c63638866}
+      \strng{authornamehash}{aa9af5bf616b1437509f374c63638866}
+      \strng{authorfullhash}{aa9af5bf616b1437509f374c63638866}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nucl. Instrum. Meth. A}
+      \field{title}{{\textsc{Geant4}---a simulation toolkit}}
+      \field{volume}{506}
+      \field{year}{2003}
+      \field{pages}{250}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/S0168-9002(03)01368-8
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

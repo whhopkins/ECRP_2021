@@ -1,0 +1,21 @@
+from ROOT import TFile, TCanvas, gROOT
+import sys
+from setStyle import setStyle
+gROOT.SetBatch()
+setStyle()
+inF = TFile.Open('TrackHistograms.root')
+hist = inF.Get('volumes/EMEC/trackStepsWgt/EMEC_gamma_vol_trackStepsWgt')
+
+c = TCanvas('c', '', 800, 600)
+c.cd()
+hist.Scale(1./1000)
+hist.SetTitle('')
+hist.GetYaxis().SetTitle('Computational cost [arbritrary units]')
+hist.GetXaxis().SetTitle('Number of steps')
+hist.GetXaxis().SetRangeUser(0, 150)
+titleSize=0.05
+hist.GetXaxis().SetTitleSize(titleSize)
+hist.GetYaxis().SetTitleSize(titleSize)
+hist.GetYaxis().SetTitleOffset(1.1)
+hist.Draw('hist')
+c.Print('trackStepsWgt.pdf')
