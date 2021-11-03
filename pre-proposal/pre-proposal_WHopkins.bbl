@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.9 $
+% $ biblatex bbl format version 3.1 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -19,37 +19,80 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{Djouadi_2007}{article}{}
+      \name{author}{3}{}{%
+        {{hash=143d87cfaa27a17cc03b25ae61a829d0}{%
+           family={Djouadi},
+           familyi={D\bibinitperiod},
+           given={Abdelhak},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3cd725751f2540eee78d2b4e76feb525}{%
+           family={Kneur},
+           familyi={K\bibinitperiod},
+           given={Jean-Loïc},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=14713524e799f7ed6b529e062ba04819}{%
+           family={Moultaka},
+           familyi={M\bibinitperiod},
+           given={Gilbert},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{80cee883a08898797f19adc0ffbecbe3}
+      \strng{fullhash}{80cee883a08898797f19adc0ffbecbe3}
+      \strng{bibnamehash}{80cee883a08898797f19adc0ffbecbe3}
+      \strng{authorbibnamehash}{80cee883a08898797f19adc0ffbecbe3}
+      \strng{authornamehash}{80cee883a08898797f19adc0ffbecbe3}
+      \strng{authorfullhash}{80cee883a08898797f19adc0ffbecbe3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comp. Phys. Commun.}
+      \field{month}{3}
+      \field{number}{6}
+      \field{title}{SuSpect: A Fortran code for the Supersymmetric and Higgs particle spectrum in the MSSM}
+      \field{volume}{176}
+      \field{year}{2007}
+      \field{pages}{426\bibrangedash 455}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1016/j.cpc.2006.11.009
+      \endverb
+    \endentry
     \entry{Berger:2008cq}{article}{}
       \name{author}{4}{}{%
-        {{hash=d71ac6ac5162659b9a0f75019301e812}{%
+        {{hash=0feac55877db44508eddead91e7d960a}{%
            family={Berger},
            familyi={B\bibinitperiod},
            given={Carola\bibnamedelima F.},
            giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
-        {{hash=70389dfdbd9b8f54aa0c4f399c6449eb}{%
+        {{hash=c3925917dfc44fac16eedfc3c64bdfbf}{%
            family={Gainer},
            familyi={G\bibinitperiod},
            given={James\bibnamedelima S.},
            giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=a174ea49482f294bc70efb30487b902c}{%
+        {{hash=6a883a4dff4ac42fc996c96ea3d2728f}{%
            family={Hewett},
            familyi={H\bibinitperiod},
            given={JoAnne\bibnamedelima L.},
            giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=33ae6672f9fc378d24d864ab1740fe48}{%
+        {{hash=4d6bd681ed10ead78f365efb4a1a4893}{%
            family={Rizzo},
            familyi={R\bibinitperiod},
            given={Thomas\bibnamedelima G.},
            giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
-      \strng{namehash}{1fc973cdeaae117175f068a49fdb9fc8}
-      \strng{fullhash}{72299964e16b47204d3dd87433ca531b}
-      \strng{bibnamehash}{72299964e16b47204d3dd87433ca531b}
-      \strng{authorbibnamehash}{72299964e16b47204d3dd87433ca531b}
-      \strng{authornamehash}{1fc973cdeaae117175f068a49fdb9fc8}
-      \strng{authorfullhash}{72299964e16b47204d3dd87433ca531b}
+      \strng{namehash}{369f0a0e3dddd324485d197e0ef8da37}
+      \strng{fullhash}{48d4aabd7a203badac41170ffbd97654}
+      \strng{bibnamehash}{48d4aabd7a203badac41170ffbd97654}
+      \strng{authorbibnamehash}{48d4aabd7a203badac41170ffbd97654}
+      \strng{authornamehash}{369f0a0e3dddd324485d197e0ef8da37}
+      \strng{authorfullhash}{48d4aabd7a203badac41170ffbd97654}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{hep-ph}
@@ -67,18 +110,284 @@
       \verb 0812.0980
       \endverb
     \endentry
+    \entry{Cahill_Rowley_2012}{article}{}
+      \name{author}{5}{}{%
+        {{hash=f389fc55b87b7f4318818eefa4e33764}{%
+           family={Cahill-Rowley},
+           familyi={C\bibinithyphendelim R\bibinitperiod},
+           given={Matthew\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=6a883a4dff4ac42fc996c96ea3d2728f}{%
+           family={Hewett},
+           familyi={H\bibinitperiod},
+           given={JoAnne\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=8c8cc4ddc51a9065fffc3b4c16c35dc4}{%
+           family={Hoeche},
+           familyi={H\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=61d64b5f9eff0f66783b4994b06b491b}{%
+           family={Ismail},
+           familyi={I\bibinitperiod},
+           given={Ahmed},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4d6bd681ed10ead78f365efb4a1a4893}{%
+           family={Rizzo},
+           familyi={R\bibinitperiod},
+           given={Thomas\bibnamedelima G.},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{dada6757521d3c37d0f9c70150c4a77a}
+      \strng{fullhash}{8eb154d944e088443a6beae1da7a3708}
+      \strng{bibnamehash}{8eb154d944e088443a6beae1da7a3708}
+      \strng{authorbibnamehash}{8eb154d944e088443a6beae1da7a3708}
+      \strng{authornamehash}{dada6757521d3c37d0f9c70150c4a77a}
+      \strng{authorfullhash}{8eb154d944e088443a6beae1da7a3708}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Eur. Phys. J. C}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{The new look pMSSM with neutralino and gravitino LSPs}
+      \field{volume}{72}
+      \field{year}{2012}
+      \field{pages}{2156}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1140/epjc/s10052-012-2156-1
+      \endverb
+      \verb{eprint}
+      \verb 1206.4321
+      \endverb
+    \endentry
+    \entry{Aaltonen:2011fi}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f62ef73f92b872943d4e326678701338}{%
+           family={{CDF Collaboration}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f62ef73f92b872943d4e326678701338}
+      \strng{fullhash}{f62ef73f92b872943d4e326678701338}
+      \strng{bibnamehash}{f62ef73f92b872943d4e326678701338}
+      \strng{authorbibnamehash}{f62ef73f92b872943d4e326678701338}
+      \strng{authornamehash}{f62ef73f92b872943d4e326678701338}
+      \strng{authorfullhash}{f62ef73f92b872943d4e326678701338}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{note}{[Addendum: Phys.Rev.Lett. 107, 239903 (2011)]}
+      \field{title}{{Search for $B_s^0 \to \mu^+ \mu^-$ and $B^0 \to \mu^+ \mu^-$ Decays with CDF II}}
+      \field{volume}{107}
+      \field{year}{2011}
+      \field{pages}{191801}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.107.191801
+      \endverb
+      \verb{eprint}
+      \verb 1107.2304
+      \endverb
+    \endentry
+    \entry{Aaltonen:2013as}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f62ef73f92b872943d4e326678701338}{%
+           family={{CDF Collaboration}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f62ef73f92b872943d4e326678701338}
+      \strng{fullhash}{f62ef73f92b872943d4e326678701338}
+      \strng{bibnamehash}{f62ef73f92b872943d4e326678701338}
+      \strng{authorbibnamehash}{f62ef73f92b872943d4e326678701338}
+      \strng{authornamehash}{f62ef73f92b872943d4e326678701338}
+      \strng{authorfullhash}{f62ef73f92b872943d4e326678701338}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{note}{[Erratum: Phys.Rev.D 97, 099901 (2018)]}
+      \field{number}{7}
+      \field{title}{{Search for $B_s^0 \rightarrow \mu^+\mu^-$ and $B^0 \rightarrow \mu^+\mu^-$ decays with the full CDF Run II data set}}
+      \field{volume}{87}
+      \field{year}{2013}
+      \field{pages}{072003}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.87.072003
+      \endverb
+      \verb{eprint}
+      \verb 1301.7048
+      \endverb
+    \endentry
+    \entry{stop0L_1}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ebfe6052e5f504e4a3579c49c44afe41}{%
+           family={{ATLAS Collaboration}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{fullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{bibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorbibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authornamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorfullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Search for direct pair production of the top squark in all-hadronic final states in proton-proton collisions at $\sqrt{s}=8$ TeV with the ATLAS detector}}
+      \field{volume}{09}
+      \field{year}{2014}
+      \field{pages}{015}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/JHEP09(2014)015
+      \endverb
+      \verb{eprint}
+      \verb 1406.1122
+      \endverb
+    \endentry
+    \entry{stopRun1}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ebfe6052e5f504e4a3579c49c44afe41}{%
+           family={{ATLAS Collaboration}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{fullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{bibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorbibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authornamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorfullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Eur. Phys. J. C}
+      \field{note}{[Erratum: Eur.Phys.J.C 76, 153 (2016)]}
+      \field{number}{10}
+      \field{title}{{ATLAS Run 1 searches for direct pair production of third-generation squarks at the Large Hadron Collider}}
+      \field{volume}{75}
+      \field{year}{2015}
+      \field{pages}{510}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1140/epjc/s10052-015-3726-9
+      \endverb
+      \verb{eprint}
+      \verb 1506.08616
+      \endverb
+    \endentry
+    \entry{stop0L_2}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ebfe6052e5f504e4a3579c49c44afe41}{%
+           family={{ATLAS Collaboration}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{fullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{bibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorbibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authornamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorfullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \field{extraname}{3}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Search for a scalar partner of the top quark in the jets plus missing transverse momentum final state at $\sqrt{s}$=13 TeV with the ATLAS detector}}
+      \field{volume}{12}
+      \field{year}{2017}
+      \field{pages}{085}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/JHEP12(2017)085
+      \endverb
+      \verb{eprint}
+      \verb 1709.04183
+      \endverb
+    \endentry
+    \entry{stop0L_3}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ebfe6052e5f504e4a3579c49c44afe41}{%
+           family={{ATLAS Collaboration}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{fullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{bibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorbibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authornamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorfullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \field{extraname}{4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Eur. Phys. J. C}
+      \field{number}{8}
+      \field{title}{{Search for a scalar partner of the top quark in the all-hadronic $t{\bar{t}}$ plus missing transverse momentum final state at $\sqrt{s}=13$~TeV with the ATLAS detector}}
+      \field{volume}{80}
+      \field{year}{2020}
+      \field{pages}{737}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1140/epjc/s10052-020-8102-8
+      \endverb
+      \verb{eprint}
+      \verb 2004.14060
+      \endverb
+    \endentry
     \entry{ATL-SOFT-PUB-2018-002}{report}{}
+      \name{author}{1}{}{%
+        {{hash=ebfe6052e5f504e4a3579c49c44afe41}{%
+           family={{ATLAS Collaboration}},
+           familyi={A\bibinitperiod}}}%
+      }
       \list{institution}{1}{%
         {CERN}%
       }
-      \list{location}{1}{%
-        {Geneva}%
-      }
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \strng{namehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{fullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{bibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorbibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authornamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorfullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \field{extraname}{5}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
-      \field{number}{ATL-SOFT-PUB-2018-002}
       \field{title}{{The new Fast Calorimeter Simulation in ATLAS}}
       \field{type}{techreport}
       \field{year}{2018}
@@ -93,20 +402,20 @@
       \true{moreauthor}
       \true{morelabelname}
       \name{author}{1}{}{%
-        {{hash=1fa1785986425bed4463a184d407c5f5}{%
+        {{hash=222e7d1c666d4ec44841beff15466852}{%
            family={Agostinelli},
            familyi={A\bibinitperiod},
            given={S.},
            giveni={S\bibinitperiod}}}%
       }
-      \strng{namehash}{aa9af5bf616b1437509f374c63638866}
-      \strng{fullhash}{aa9af5bf616b1437509f374c63638866}
-      \strng{bibnamehash}{aa9af5bf616b1437509f374c63638866}
-      \strng{authorbibnamehash}{aa9af5bf616b1437509f374c63638866}
-      \strng{authornamehash}{aa9af5bf616b1437509f374c63638866}
-      \strng{authorfullhash}{aa9af5bf616b1437509f374c63638866}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \strng{namehash}{4034275bca42b52c1a394d599186c42e}
+      \strng{fullhash}{4034275bca42b52c1a394d599186c42e}
+      \strng{bibnamehash}{4034275bca42b52c1a394d599186c42e}
+      \strng{authorbibnamehash}{4034275bca42b52c1a394d599186c42e}
+      \strng{authornamehash}{4034275bca42b52c1a394d599186c42e}
+      \strng{authorfullhash}{4034275bca42b52c1a394d599186c42e}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nucl. Instrum. Meth. A}
@@ -117,6 +426,98 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1016/S0168-9002(03)01368-8
+      \endverb
+    \endentry
+    \entry{computingCDR}{report}{}
+      \name{author}{4}{}{%
+        {{hash=c47d6164a76e3533b772d9af1009e6f5}{%
+           family={Calafiura},
+           familyi={C\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=36fa905bec248f250f6e5bd30c45c812}{%
+           family={Catmore},
+           familyi={C\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=aa301c490ece230267f2cd4673a77df1}{%
+           family={Costanzo},
+           familyi={C\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9bdbdc292092cad4419d3b7354c14e11}{%
+           family={Di\bibnamedelima Girolamo},
+           familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {CERN}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \strng{namehash}{95e24ab4708ef734f36b7bebab4fca3a}
+      \strng{fullhash}{4029b2f6ac48f36abc8b92e82038c43c}
+      \strng{bibnamehash}{4029b2f6ac48f36abc8b92e82038c43c}
+      \strng{authorbibnamehash}{4029b2f6ac48f36abc8b92e82038c43c}
+      \strng{authornamehash}{95e24ab4708ef734f36b7bebab4fca3a}
+      \strng{authorfullhash}{4029b2f6ac48f36abc8b92e82038c43c}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{number}{CERN-LHCC-2020-015. LHCC-G-178}
+      \field{title}{{ATLAS HL-LHC Computing Conceptual Design Report}}
+      \field{type}{techreport}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/2729668
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/2729668
+      \endverb
+    \endentry
+    \entry{hcw2018}{report}{}
+      \name{author}{3}{}{%
+        {{hash=8d53de88bb1f9d8238b54a0153671eb4}{%
+           family={Dattagupta},
+           familyi={D\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=07ff10770afecdc03f5ec3e7a09cd93b}{%
+           family={Majersky},
+           familyi={M\bibinitperiod},
+           given={O},
+           giveni={O\bibinitperiod}}}%
+        {{hash=04dd80d7a70e91398ead40eeb18045e9}{%
+           family={Nachman},
+           familyi={N\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Heidelberg}%
+      }
+      \strng{namehash}{1c98bf21ef5b200c7ab8fe702327c6a9}
+      \strng{fullhash}{1c98bf21ef5b200c7ab8fe702327c6a9}
+      \strng{bibnamehash}{1c98bf21ef5b200c7ab8fe702327c6a9}
+      \strng{authorbibnamehash}{1c98bf21ef5b200c7ab8fe702327c6a9}
+      \strng{authornamehash}{1c98bf21ef5b200c7ab8fe702327c6a9}
+      \strng{authorfullhash}{1c98bf21ef5b200c7ab8fe702327c6a9}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{X*-tagging performance in data}}
+      \field{type}{techreport}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://indico.cern.ch/event/711895/sessions/276119/
+      \endverb
+      \verb{url}
+      \verb https://indico.cern.ch/event/711895/sessions/276119/
       \endverb
     \endentry
   \enddatalist

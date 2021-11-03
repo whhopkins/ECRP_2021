@@ -1,85 +1,89 @@
-\documentclass[letter, USenglish, 11pt]{article}
+\documentclass[letter, USenglish, 11pt, subfigure]{article}
 \usepackage[margin=1in]{geometry}
 \newcommand*{\ATLASLATEXPATH}{../}
 \usepackage{\ATLASLATEXPATH atlaspackage}
 \usepackage{\ATLASLATEXPATH atlasbiblatex}
 \usepackage{\ATLASLATEXPATH atlasphysics}
+% \usepackage{\ATLASLATEXPATH atlasjetetmiss}
+\usepackage{\ATLASLATEXPATH ANA-SUSY-2018-12-PAPER-defs}
+\usepackage{enumerate}
+\newcommand{\mm}{\ensuremath{\mu^{+}\mu^{-}}}
+\newcommand{\bsmm}{\ensuremath{\Bs\to\mm}}
+\newcommand{\bdmm}{\ensuremath{\Bd\to\mm}}
+\usepackage{lineno}
+%\linenumbers
+\usepackage{wrapfig}
+\usepackage{placeins}
+\usepackage{pdfpages}
+\usepackage[none]{hyphenat} 
 \addbibresource{../proposal_WHopkins.bib}
+\addbibresource{../ATLAS-SUSY.bib}
 
-\title{Early Career Pre-proposal: \\Data exploration of new physics models and machine-learning-enhanced detector simulation}
-\author{Walter Hopkins, Assistant Physicist\\Argonne National Laboratory\\(630) 252 7551, whopkins@anl.gov\\Year Doctorate Awarded: 2013\\Eligibility Extension Requested: No\\Number of Times Previously Applied: 0\\ Topic Area: Experimental Research at the \\Energy Frontier in High Energy Physics\\
-  FOA Number: DE-FOA-0002421\\Signature of Laboratory Director: \\ \\ \\Paul K. Kearns, Laboratory Director
+\title{Early Career Pre-proposal: \\\input{../title}}
+\author{Walter Hopkins, Assistant Physicist\\Argonne National Laboratory\\(630) 252 7551, whopkins@anl.gov\\Year Doctorate Awarded: 2013\\Eligibility Extension Requested: No\\Number of Times Previously Applied: 1\\ Topic Area: Experimental Research at the \\Energy Frontier in High Energy Physics\\
+  FOA Number: DE-FOA-0002563\\Signature of Laboratory Director: \\ \\ \\Paul K. Kearns, Laboratory Director
 }
 \date{}
 \begin{document}
 \maketitle
 
-% General structure notes
-% - Each paragraph must have a clear statement.
-% * First and last sentence should highlight/emphasize the point.
+Results from the Large Hadron Collider (LHC) experiments have verified the predictions of the highly successful Standard Model (SM). However, the SM  lacks an explanation for several observed phenomena (e.g., dark matter) motivating the search for Beyond the Standard Model (BSM) physics. The current BSM search strategy uses simplified BSM models (i.e., models with 2-5 parameters) to design BSM search regions. This simplified approach was driven by enhanced BSM physics sensitivity from the large increases of center-of-mass energies during early LHC upgrades. Future LHC upgrades will no longer include significant increases in energy, but will first result in a doubling (Run~3) and then a tenfold increase (High Luminosity-LHC, HL-LHC) of the current data set.
 
-\section*{Introduction}
-The ATLAS experiment at the Large Hadron Collider (LHC) at CERN has been successful in completing the Standard Model (SM) with the discovery of the Higgs boson. The SM is a highly successful theory but lacks an explanation for several observed phenomena: dark matter and why the Higgs mass isn’t significantly larger are among a few. Many searches for Beyond the Standard Model (BSM) physics at the LHC have provided no significant evidence for new physics. 
+The HL-LHC comes with challenges; in particular, two linked challenges faced by the ATLAS experiment are (1) the need to exhaustively probe the large high-dimensional data set (where the dimensions are experimental observables such as particle momenta) for regions that might be hiding BSM physics and (2) the computational requirements of producing large amounts of simulations to estimate SM backgrounds in these potentially BSM enriched regions. This proposal presents {\bf the development of machine learning (ML) algorithms to both methodically search for BSM physics and enable accurate background simulations for these searches.} The upcoming increase in High Performance Computing (HPC) resources (such as the Aurora supercomputer, for which the PI is leading an early access proposal) and recent developments in ML yield a particularly well-timed and unique opportunity for facing these challenges.
 
-ATLAS and the LHC will be going through two upgrades which will first result in a doubling of the current data set (Run 3) and then a tenfolding of the dataset (High Luminosity-LHC, HL-LHC). Unlike previous upgrades the sensitivity to new physics will not be greatly enhanced by a large increase of collision energy. This means that the search for BSM physics must now spread to all corners of search space to leave no (or a minimal number of) stones uncovered. {\bf This proposal presents an automated method to search for new physics in the HL-LHC era by probing experimental observable space with unsupervised machine learning (ML) techniques.} The result of the exploration of the observable space could point to previously unexplored regions. Estimating SM backgrounds in these regions accurately will be imperative for the BSM discovery potential and requires accurate detector simulations. Therefore, {\bf the PI plans to improve the computational performance of the Geant4 ATLAS detector simulation with ML to enable accurate simulations of SM processes in remote regions of observable space.}
+The lack of evidence for BSM physics motivates a change in search strategy, specifically to move beyond using simplified theory models to design searches. Broader frameworks, e.g., the 19-parameter Phenomenological 
+Minimal Supersymmetric Standard Model (pMSSM)~\cite{Djouadi_2007,Berger:2008cq,Cahill_Rowley_2012}, have been studied but have not been used to build a BSM search program. This is because they can produce thousands of models and applying the current labor-intensive search methodology at such a scale is not feasible. Previous attempts at categorizing the experimental observables of these models only included $\sim$10 models. This proposal presents {\bf the development of a novel search strategy for the HL-LHC based on probing the experimental observables of thousands of models with ML techniques.} The PI will develop the ML-driven search strategy in the context of ATLAS Supersymmetry (SUSY)
+%~\cite{Golfand:1971iw,Volkov:1973ix,Wess:1974tw,Wess:1974jb,Ferrara:1974pu,Salam:1974ig}
+searches, but the strategy could be applied to other models and experiments. The PI's experience in ML, starting with the use of ML for his Ph.D. thesis~\cite{Aaltonen:2011fi,Aaltonen:2013as},
+will aid the success of this proposal. The PI will also draw from his work within the ATLAS SUSY group, both as a leader of flagship searches~\cite{stop0L_1,stopRun1,stop0L_2,stop0L_3} and as a subgroup convener of the ATLAS SUSY strong production group, to ensure the new search strategy is validated and ready to guide the physics search program for the HL-LHC. Additionally, the PI will leverage the computing resources and ML expertise at the Argonne Leadership Computing Facility (ALCF).
 
-\clearpage
-\section*{Data exploration in observable space}
-Identifying new regions in ATLAS' experimental observable space (the space made up of all experimental observables we can utilize such as the momenta of particles and the momenta of combinations of particles) is essential in developing future BSM searches. The current methodology of finding these regions involves manually designing search regions for each BSM model (with a particular choice of theoretical parameters) but to probe a significantly wider range of regions where BSM physics could be hiding, this task must be automated. This can be achieved with ML feature extraction (e.g. autoencoders) and unsupervised data exploration algorithms (e.g. clustering). A broad BSM model, which can contain many parameters, has to be probed to identify regions where new physics could be discovered. An appealing candidate for such a BSM model is the Phenomenological 
-Minimal Supersymmetric Standard Model (pMSSM)~\cite{Berger:2008cq}. Once pMSSM parameter sets that have not been excluded by previous experimental bounds have been identified, the clustering algorithm will identify regions in experimental observable space that contain unique features. 
+An important aspect of designing BSM search regions is the accurate estimation of SM backgrounds with simulations. ATLAS uses two frameworks for detector response simulations: a fast parameterization (FastSim) and an implementation of \GEANT (FullSim). The scale of the computational cost for the required SM background simulations at the HL-LHC prohibits the use of FullSim~\cite{computingCDR}, and FastSim has been shown to mismodel the decay products of heavy particles~\cite{hcw2018} which are likely to be present in BSM physic searches. Therefore, the PI {\bf proposes using ML as a way to utilize the significant computing power of HPCs to produce the needed ATLAS detector simulations}. This will be achieved by applying an ML-based correction to a modified configuration of FullSim, altered to be computationally faster. The use of an ML-based correction would allow for better use of HPC resources for simulation by performing the ML correction on graphical processing units (GPUs), which are expected to make up a large fraction of the computational power of future HPC resources, while running FullSim on the CPU resources. The success of the proposed work will be aided by the PI's experience with the ATLAS calorimeters and his work within the ATLAS \GEANT\ optimization task force, which studies computational bottlenecks of FullSim. 
 
-Applying clustering techniques to the high-dimensional space of observable is an automated method to identify regions where new physics could be hiding. The high-dimensional space of experimental observables will contain thousands of pMSSM models, each with a different set of theory parameters, resulting in billions of simulated data points. Clustering will combine theory models who may have different theory parameter sets but land in the same region in observable space. This could reduce thousands of theory models into a significantly smaller number or proto-search regions. These regions can then be ordered by their distance from SM background to identify regions with the highest potential for BSM physics discovery potential.
-% Need to give this paragraph and section a better ending. 
+%% \subsection*{Background and Motivation}
+
+%% Identifying new promising regions in ATLAS's experimental observable space (the space made up of all experimental observables, such as momenta of particles and invariant masses of combinations of particles) is essential in developing future BSM searches.
+%% The current methodology of searching for BSM physics involves manually optimizing the requirements on observables for each simplified BSM model with a particular choice of two to three theoretical parameters (e.g., the masses of two BSM particles that are within reach of the LHC). More complex BSM models, such as the 19-parameter pMSSM for the relationship between the pMSSM and simplified models), have been studied by both ATLAS~\cite{ATLAS_pMSSM} and CMS~\cite{CMS_pMSSM}. These studies involved scanning the 19 theory parameters, simulating the physics processes that result from a particular choice of parameters, applying simplified detector effects, and evaluating whether a particular set of theory model parameters was excluded by previous ATLAS or CMS searches. The non-excluded models were studied further to understand why they evaded previous searches. Within ATLAS, some of these models had their mass spectra manually inspected to gain insight into their expected signature in experimental observable space. This method resulted in some additional interpretation of standard early Run~2 SUSY searches~\cite{stopEarlyRun2}. However, the experimental space of the non-excluded models was not systematically probed and no new searches were designed on the basis of the non-excluded models due to the difficulty of interpreting thousands of models manually. CMS attempted to interpret the non-excluded models as a function of average values of observables. This figure yields valuable information about the observables of non-excluded models, but is difficult to interpret because of the high dimensionality of the observable space.
 
 
-\section*{ML-enhanced detector simulation}
+%% Systematically probing the observable space of non-excluded models, which could be harboring new physics, requires novel techniques that are able to summarize high-dimensional spaces. Machine learning is especially adept at processing high-dimensional spaces and can be used to identify promising new search regions inspired by broad theory models such as the pMSSM. In particular, ML clustering algorithms, which group similar data points together, could group thousands of pMSSM models with different theory parameters but similar experimental signatures, forming the basis for new search regions. Considering the large number of models, developing search regions on the basis of these models is simply not practical with previous methods. Additionally, ML's ability to derive high-level features, such as particle masses from daughter particle momenta, makes it an attractive approach for automatically designing new search regions using common low-level features. Thus ML has the potential to significantly expand BSM searches for the HL-LHC by guiding the searches in an automated and methodical way.
 
-% Should I really mention substructure when I use SRD as an example that uses ISR?
-The result of the data exploration could point to very energetic regions of observable space resulting in energetic jets (e.g. from large amounts of initial state radiation, ISR), Higgs bosons, or top quark decays. These types of topologies can be identified with substructure techniques (either by identifying or vetoing such structure) that make use of the correlation between the Higgs or top quark decay products which form the constituents of the jet. To have sufficiently high statistics in these regions, large amount of SM Monte Carlo (MC) simulations need to be produced.
+%% Owing to the scale of both the simulations needed for the clustering and the clustering itself, this proposal will take advantage of advanced computing resources such as HPC resources. Argonne National Laboratory has both computing resources (e.g., Aurora) and expertise (at the ALCF) that will make the realization of this proposal possible. Significant computing resources will be required to cluster the samples from the large pMSSM parameter scan. Additionally, the determination of the type of clustering algorithm and the optimal parameters for the clustering algorithm may require several passes through this large data set. The PI's team, consisting of two postdocs and himself, will build on the existing relationship with their ALCF colleagues to scale and optimize to both develop and optimize clustering algorithms.
 
-ATLAS makes use of two detector simulations: a parameterized calorimeter simulation (FastSim)~\cite{ATL-SOFT-PUB-2018-002} and a full Geant4~\cite{Agostinelli:2002hh} simulation (FullSim). FastSim has been shown to mismodel the number of constituents of jets which strongly affects the modelling of substructure~\cite{ATL-SOFT-PUB-2018-002}. Thus probing the far reaches of the SM will require  FullSim to accurately describe backgrounds. Amplifying the need for large amounts of simulation is the use of multiple bins in various quantities ($\met$, jet mass, heavy flavor multiplicity, etc) to increase the sensitivity by comparing shape differences between BSM models and the SM. Finally, future new physics searches will also make use of categorizing ML techniques to distinguish signal from background. These ML techniques require large amounts of data to ensure robustness against detector systematic uncertainties which in turn will require simulations with an accurate representation of detector effects.
+%% BSM physics, that could be hiding in regions identified by clustering, is likely to include W/Z/Higgs boson or top quark decays, which can be mimicked by SM processes. These decays can be identified as jets (objects that represent the products of quark and gluon hadronization) with particular correlations between the jet constituents (substructure). Thus, for BSM physics searches, the modeling of substructure is crucial in estimating SM backgrounds accurately.
 
-% As an example of a Run 2 search for new physics, consider the search for new physics in the  $\ttbar+\met$ final state~\cite{stop0L}. The MC statistical uncertainty was one of the main sources of uncertainties for signal regions aimed at compressed SUSY with a maximum MC statistical uncertainty of 17\%. This region required an energetic jet originating from ISR. The lack of MC statistics not only affected the MC statistical uncertainty but also increased many of the detector systematic uncertainties due to the comparison of different configurations which all suffer from low MC statistics. The resulting maximal total systematic uncertainty was $\sim$30\%. Producing sufficient amounts of accurate MC could reduce the total systematic uncertainty to $\sim$10\% which would bring the total uncertainty (statistical and systematic) to $\sim$15\% down from $\sim$30\% with 3000~\ifb. This decrease in the total uncertainty would nearly double the sensitivity, from 1.4$\sigma$ to 2.7$\sigma$, for a 700~GeV top squark undergoing a compressed four-body decay.
-% (this only takes one of the low statistic bins in the multi-bin fit into account).
+%% The parametric FastSim has been shown to mismodel the number of constituents of jets, strongly affecting the modeling of substructure. The effect of this mismodeling on the efficiency for identifying top quarks, which compares the efficiency in data, FastSim, and FullSim. There have been recent efforts to develop ML simulation, based on generative adversarial networks (GAN) and variational autoencoders, that would completely replace FastSim ~\cite{calogan,atlasgan}. These efforts show promise and actually improve the modeling of heavy particle decays somewhat. However, challenges remain in modeling as well as in aspects such as training (GANs are notoriously difficult to train) and interpretability. Thus, to maximize the discovery potential for BSM physics at the HL-LHC, some use of FullSim to simulate SM background may be required. 
 
-% This calculation was done by using the systematics table for SRD1
-% https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/SUSY-2018-12/tab_10.png
-% and summing all the uncertainties in quadrature:
-% sqrt(.09^2+.04^2+.03^2+.18^2+.04^2+.05^2+.07^2+.04^2+.12^2+.17^2) ~ 31% as in the note.
-% then reducing the Pileup, JER, and MC stat from 12%, 18%, and 17% to 5%. This is reasonable because in high stat SRs the Pileup and JER tend to be below 10% (pileup being even lower). This results in:
-% sqrt(.09^2+.04^2+.03^2+.05^2+.04^2+.05^2+.07^2+.04^2+.05^2+.05^2) ~ 17%. Pushing this to 10\% is probably realistic because better MC is likely to decrease other systematic uncertainties. 
+%% However, producing simulations with FullSim for HL-LHC conditions with sufficient statistics is computationally prohibitive. Significant processing speed improvements to FullSim are required to meet budget constraints ~\cite{computingCDR}. One of the main computationally expensive parts of the ATLAS simulation is the simulation of particles navigating through the complex geometry of the EM calorimeters. Computational speed improvements can be achieved by eliminating particles (and thus their daughters) by tuning FullSim configurations. The reduction in simulated particles would remove many of the geometric calculations and save significant amounts of computing time.
 
-% For the significance, s/sqrt(s+b+deltaB^2) was used. The signal yield for a 550 GeV stop was taken from the cutflow:
-% https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/SUSY-2018-12/tabaux_07.png
-% and scaled down to correspond with the cross section of a 700 GeV stop taken from:
-% https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SUSYCrossSections13TeVstopsbottom
+%% The gains in computational speed from changing FullSim configurations typically reduce the accuracy of the simulation. This proposal aims to develop an ML-based correction to a faster FullSim configuration to ensure a minimal loss in accuracy. The ML-based correction algorithm can be run on a variety of computing resources such as future HPC resources. These resources will have significant fractions of compute power in the form of GPUs. Utilizing GPUs typically requires rewriting code, such as \GEANT, but an ML algorithm can exploit GPUs since ML libraries (such as TensorFlow~\cite{tensorflow2015-whitepaper} and PyTorch~\cite{NEURIPS2019_9015}) are already optimized for a variety of computing resources. Thus, the proposed work could enable the use of CPU and GPU computing resources for simulation (currently FullSim is only utilizing CPU resources), potentially allowing for the needed amount of FullSim for new physics searches at the HL-LHC.
 
-% The background estimation was scaled up to 3000/fb and taken from:
-% https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/SUSY-2018-12/tab_13.png
 
-% - SRD requires high pT ISR (could the analysis benefit from top vetos? This would require substructure)
-
-Producing MC simulations for HL-LHC conditions with sufficient statistics is computationally challenging. Significant processing speed improvements to FullSim are required. One of the main computationally expensive parts of the ATLAS simulation is the simulation of particles, particularly photons and neutrons, navigating through the Liquid Argonne (LAr) calorimeter geometry. These photons and neutrons interact less often with the detector material than other particles and they traverse many geometric boundaries (the boundaries are defined by the cells and absorber material). ML could help estimate when these photons and neutrons are most likely to interact, skipping many calculations and thus saving significant amounts of time allowing for the needed amount of FullSim for new physics searches.
-
-Due to the scale of both the simulation needed for the data exploration and the data exploration itself, this proposal will take advantage of advanced computing resources such as HPCs. Argonne National Laboratory (ANL) has both computing resources (e.g. Aurora 21) and expertise (at the Argonne Leadership Computing Facilities, ALCF) that will make the realization of this proposal possible. Significant computing resources will be required to cluster the samples from the large pMSSM parameter scan. Additionally, the determination of the type of clustering algorithm and of the optimal parameters for the clustering algorithm may require several passes through this large data set. The PI will make use of the ALCF's ML and computing expertise by collaborating with ML and parallel computing experts at the ALCF. 
-
-\section*{Conclusion}
-This proposal aims to develop ML techniques for automated BSM search region design by studying non-excluded theory models such as pMSSM models. Additionally, the proposal presents an R\&D program aimed at improving the computational performance of the ATLAS implementation of Geant4. The success of this proposal will be aided by the PI's experience with BSM searches, the ATLAS LAr calorimeter, and machine learning. The PI has led searches for Supersymmetry that involve probes in far reaches of observable parameter space and has performed physics performance studies for the ATLAS Phase-I LAr calorimeter upgrade. The PI has also studied ML algorithms for BSM searches as well as to approximate detector effects. Finally, the PI of this proposal is also the PI for the Aurora 21 Early Science Proposal which aims at preparing ATLAS algorithms to run on the Aurora 21 HPC.
+\subsection*{Project Objectives}
+The objective of the proposed work is to develop ML algorithms (i.e., clustering) to methodically design a BSM search strategy for the HL-LHC. The ongoing ATLAS Run~2 pMSSM scan, which is expected to conclude near the end of 2022 or early 2023, yields an opportunity to test prototype ML algorithms to derive a BSM physics search program for Run~3. To enable these searches for the HL-LHC, the proposed research also aims to prepare FullSim for HL-LHC conditions by preparing FullSim for use on future HPC resources and improving its computational speed with ML. The specific objectives are as follows:
+\begin{itemize}
+\item Develop an ML-driven BSM physics search strategy.
+  \begin{itemize}
+  \item Apply clustering to non-excluded models resulting from the ATLAS Run~2 pMSSM scan and identify promising regions for further development into new search regions for Run~3. The clustering algorithm's inputs will be human-developed high-level variables. 
+  \item Introduce automatic high-level variable (e.g., invariant di-particle masses) extraction to the clustering workflow. The aim is to mitigate the chance that BSM physics is missed because of the use of suboptimal high-level variables. 
+  \end{itemize}
+  \vspace{1in}
+\item Prepare the ATLAS detector simulation to produce high-statistics SM background simulations for HL-LHC BSM searches.
+  \begin{itemize}
+  \item Develop an ML-correction algorithm on detector geometries with incrementally increasing complexity.
+  \item Validate the ML-correction algorithm and integrate it into the ATLAS simulation workflow.
+  \end{itemize}
+\end{itemize}
 
 \printbibliography
 \clearpage
-\section*{Collaborators and Co-editors}
-Michael Begel (Brookhaven National Laboratory), Tim Cohen (University of Oregon), Davide Costanzo (University of Sheffield), Yuji Enari (Tokyo ICEPP), Hal Evans (Indiana University), Laura Jeanty (Univeristy of Oregon), Sabine Lammers (Indiana University), Zach Marshall (Lawrence Berkeley National Laboratory), Federico Meloni (DESY), David Miller (University of Chicago), George Redingler (Brookhaven National Laboratory), Frederik Ruehr (Freiburg), Rosa Simoniello (CERN), Pavol Strizenec (Kosice), David Strom (University of Oregon), Dan Tovey (University of Sheffield), Guillaume Unal (CERN)
+\includepdf[landscape=true]{Collaborator.pdf}
+% \subsection*{Collaborators and Co-editors}
+% Michael Begel (Brookhaven National Laboratory), Tim Cohen (University of Oregon), Davide Costanzo (University of Sheffield), Yuji Enari (Tokyo ICEPP), Hal Evans (Indiana University), Laura Jeanty (Univeristy of Oregon), Sabine Lammers (Indiana University), Zach Marshall (Lawrence Berkeley National Laboratory), Federico Meloni (DESY), David Miller (University of Chicago), George Redlinger (Brookhaven National Laboratory), Frederik Ruehr (Freiburg), Rosa Simoniello (CERN), Pavol Strizenec (Kosice), David Strom (University of Oregon), Dan Tovey (University of Sheffield), Guillaume Unal (CERN)
 
-\section*{Graduate and Postdoctoral Advisors and Advisees}
-Graduate advisor: Julia Thom-Levy, Cornell University
-\\Principal Postdoctoral sponsor: Stephanie Majewski, University of Oregon
+% \subsection*{Graduate and Postdoctoral Advisors and Advisees}
+% Graduate advisor: Julia Thom-Levy, Cornell University
+% \\Principal Postdoctoral sponsor: Stephanie Majewski, University of Oregon\\
+% Graduate advisees: J. Bonilla (University of California at Davis), I. Snyder (formerly at University of Oregon now in industry), G. Gledhill (University of Oregon)
+
 
 \end{document}
-
-% Next steps
-% - Add bibliography
-% - Add highlighting
-% - Add estimation of how much MC is needed.
-% - Copy to full proposal document
-% - Write seminar
